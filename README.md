@@ -1,18 +1,51 @@
-# Atividade de Redes - Teste de Conectividade
+# 🌐 Repositório de Redes de Computadores — info-200
 
-## Topologia da Rede
-* **Servidor**: IP `192.168.10.100` / Máscara `255.255.255.0`
-* **PCs**: IPs de `192.168.10.10` a `192.168.10.12`
-* **Interconexão**: Conectados através de um Switch Catalyst 2960.
+<p align="center">
+  <img src="https://img.shields.io/badge/IFMA-Campus%20Itapecuru--Mirim-green?style=for-the-badge" alt="IFMA">
+  <img src="https://img.shields.io/badge/Curso-T%C3%A9cnico%20em%20Inform%C3%A1tica-blue?style=for-the-badge" alt="Informática">
+  <img src="https://img.shields.io/badge/Turma-info--200-orange?style=for-the-badge" alt="info-200">
+</p>
 
-## Resolução do Problema
-O erro inicial de envio de mensagens ocorria porque o simulador estava no modo **Simulation** (com o tempo pausado). 
-Ao alternar para o modo **Realtime** e testar a comunicação via Prompt de Comando, os pacotes foram transmitidos com sucesso.
+---
 
-### Resultado do Teste de Ping (PC3 para Servidor):
-```bash
-Pinging 192.168.10.100 with 32 bytes of data:
-Reply from 192.168.10.100: bytes=32 time=3ms TTL=128
-Reply from 192.168.10.100: bytes=32 time=1ms TTL=128
+## 👋 Bem-vindo ao Nosso Hub de Conectividade!
 
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+Seja muito bem-vindo ao nosso quartel-general de estudos, relatórios e simulações práticas da matéria de **Redes de Computadores** do Instituto Federal do Maranhão (IFMA). 
+
+Aqui, nós deciframos os mistérios de como os dados viajam pelo mundo em milissegundos, transformando cabos, ondas de rádio e placas de silício em mágica funcional.
+
+---
+
+## 🎨 Mapa da Nossa Rede Mental (Topologia Conceptual)
+
+Para ilustrar como enxergamos a matéria, preparamos este desenho de arquitetura de rede que representa a jornada do nosso aprendizado:
+
+```text
+               ╔═════════════════════════════════════════════════╗
+               ║               ☁️ A GRANDE INTERNET ☁️             ║
+               ║          (Onde tudo acontece e se conecta)      ║
+               ╚═════════════════════════════════════════════════╝
+                                        │
+                                        ▼ [Camada 3: Rede]
+                               ┌─────────────────┐
+                               │  📌 ROTEADOR    │ ◄─── (Lê IPs, escolhe caminhos
+                               └────────┬────────┘       e interconecta mundos!)
+                                        │
+                                        ▼ [Camada 2: Enlace]
+                               ┌─────────────────┐
+                               │  🎛️ SWITCH     │ ◄─── (O mestre da LAN! Lê MACs,
+                               └──────┬─┬─┬──────┘       evita colisões e organiza tudo)
+                                      │ │ │
+                 ┌────────────────────┘ │ └────────────────────┐
+                 ▼                      ▼                      ▼
+            ┌─────────┐            ┌─────────┐            ┌─────────┐
+            │ 💻 PC 1 │            │ 💻 PC 2 │            │ 💻 PC 3 │
+            ├─────────┤            ├─────────┤            ├─────────┤
+            │  IGOR   │            │  CAUÃ   │            │ RENATO  │
+            └─────────┘            └─────────┘            └─────────┘
+         [192.168.10.10]        [192.168.10.20]        [192.168.10.30]
+         
+         └──────────────────────────────┬──────────────────────────────┘
+                                        ▼
+                         ⚡ [Camada 1: Física (Bits)]
+               (Cabos trançados, conectores RJ-45 e pura energia!)
